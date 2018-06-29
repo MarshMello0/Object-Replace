@@ -7,14 +7,13 @@ using System.Reflection;
 using System.Linq;
 using System.IO;
 
+[ModTitle("ObjectReplace")]
+[ModDescription("Replace objects from the game with your own!")]
+[ModAuthor(". Marsh.Mello .")]
+[ModVersion("1.1.0")]
+[RaftVersion("1.03B")]
 public class ObjectReplace : Mod
 {
-    public ObjectReplace() : base("ObjectReplace", "ObjectReplace", "0.5", "1.01B")
-    {
-        var harmony = HarmonyInstance.Create("com.raft.marshmello.ObjectReplace");
-        harmony.PatchAll(Assembly.GetExecutingAssembly());
-    }
-
     void Start()
     {
         CreateCommands();
